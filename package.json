@@ -1,0 +1,11 @@
+{
+    "name": "@august/kashima",
+    "description": "A electron application to play Music within a directory.",
+    "version": "0.0.1",
+    "main": "src/index.js",
+    "bugs": { "url": "https://github.com/auguwu/kashima/issues" },
+    "dependencies": {
+        "electron": "3.0.10",
+        "discord-rpc": "3.0.1"
+    }
+}

@@ -1,0 +1,11 @@
+# Travis CI Configuration
+sudo: true
+language: node_js
+node_js:
+  - '8'
+install: npm i
+jobs:
+  include:
+    - stage: test
+      script: bash ./deploy/travis.sh
+dist: xenial
