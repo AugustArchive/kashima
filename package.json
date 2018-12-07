@@ -7,11 +7,12 @@
     "dependencies": {
         "electron": "3.0.10",
         "discord-rpc": "3.0.1",
-        "dotenv": "6.2.0"
+        "dotenv": "6.2.0",
+        "electron-builder": ""
     },
     "scripts": {
         "start": "electron .",
-        "test": "npm i -g eslint && eslint ."
+        "test": "eslint ."
     },
     "author": "auguwu"
 }
