@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 body#application {
     margin-top: 100px;
@@ -9,12 +9,8 @@ body#application {
     background-size: cover!important;
 }
 
-p#songTitle {
+h1, h2 {
     font-family: 'Montserrat' sans-serif;
-}
-
-h1#header {
-    font-family: 'Raleway' sans-serif;
 }
 
 img#image {
