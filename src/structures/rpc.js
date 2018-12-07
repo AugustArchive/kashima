@@ -1,4 +1,5 @@
-const DiscordRPC, { Client } = require('discord-rpc');
+const DiscordRPC = require('discord-rpc');
+const { Client } = require('discord-rpc');
 
 module.exports = class KashimaRPCClient extends Client {
     /**
@@ -11,6 +12,11 @@ module.exports = class KashimaRPCClient extends Client {
 
         this.options = options;
         DiscordRPC.register(options.clientID); // Registers the client ID
+
+        this.on('ready', () => {
+            console.log(`[KashimaRPC] [Process ${process.pid}] <=> Connected to Discord, setting RPC details...`);
+            this.setClientActivity();
+        });
     }
 
     /**
@@ -28,14 +34,15 @@ module.exports = class KashimaRPCClient extends Client {
     /**
      * Sets the activity of the RPC
      * 
+     * @param {string} [details] The details
      * @returns {KashimaRPCClient} The client instance
      */
-    setClientActivity() {
+    setClientActivity(details = '⏯ Currently Idling...') {
         this.setActivity({
-            largeImageKey: 'kashima',
-            details: '⏯ Currently Idling...',
-            smallImageKey: 'kashimaIcon',
-            smallImageText: 'https://github.com/auguwu/kashima'
+            details,
+            smallImageKey: 'kashimasmall',
+            smallImageText: 'https://github.com/auguwu/kashima',
+            largeImageKey: 'kashimaicon'
         }, process.pid);
         return this;
     }

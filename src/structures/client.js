@@ -1,14 +1,12 @@
-const { BrowserWindow } = require('electron');
-const { format }        = require('url');
-const { join }          = require('path');
+const { BrowserWindow, app } = require('electron');
+const { format }             = require('url');
+const { join }               = require('path');
 
 module.exports = class KashimaClient {
     /**
      * Kashima client constructor
-     * 
-     * @param {import('electron').App} app The application
      */
-    constructor(app) {
+    constructor() {
         this.app = app;
         this.ready = false;
         this.window = null;
@@ -20,6 +18,9 @@ module.exports = class KashimaClient {
      * @returns {KashimaClient} The client instance
      */
     createBrowserWindow() {
+        if (this.window)
+            return; // If the window was created already
+
         this.window = new BrowserWindow({ title: 'Kashima' });
         this.window.setMenu(null);
         this.window.webContents.openDevTools();
@@ -29,7 +30,6 @@ module.exports = class KashimaClient {
             protocol: 'file:',
             slashes: true
         }));
-
         this.window.on('closed', () => this.window = null);
     }
 

@@ -6,6 +6,12 @@
     "bugs": { "url": "https://github.com/auguwu/kashima/issues" },
     "dependencies": {
         "electron": "3.0.10",
-        "discord-rpc": "3.0.1"
-    }
+        "discord-rpc": "3.0.1",
+        "dotenv": "6.2.0"
+    },
+    "scripts": {
+        "start": "electron .",
+        "test": "eslint ."
+    },
+    "author": "auguwu"
 }

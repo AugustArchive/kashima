@@ -1,11 +1,10 @@
-# Travis CI Configuration
+# Travis CI Configuration for Kashima
 sudo: true
 language: node_js
 node_js:
   - '8'
-install: npm i
-jobs:
-  include:
-    - stage: test
-      script: bash ./deploy/travis.sh
+  - '9'
+  - '10'
+install: npm install
+script: eslint .
 dist: xenial
