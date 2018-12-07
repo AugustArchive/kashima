@@ -11,7 +11,7 @@
     },
     "scripts": {
         "start": "electron .",
-        "test": "eslint ."
+        "test": "npm i -g eslint && eslint ."
     },
     "author": "auguwu"
 }

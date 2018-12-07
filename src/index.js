@@ -1,27 +1,53 @@
-const KashimaClient = require('./structures/client');
-const KashimaRPC    = require('./structures/rpc');
+console.log([
+    '  _  __         _     _',
+    ' | |/ /__ _ ___| |__ (_)_ __ ___   __ _',
+    " | ' // _\` / __| '_ \\| | '_ \` _ \\ / _\` |",
+    " | . \\ (_| \\__ \\ | | | | | | | | | (_| |",
+    " |_|\\_\\__,_|___/_| |_|_|_| |_| |_|\\__,_|",
+    "",
+    "Kashima made by auguwu and other contributors!",
+    `Node.js: ${process.version}`,
+    `Electron: ${require('../node_modules/electron/package.json').version}`,
+    "",
+    "State: Loading..."
+].join('\n'));
+const { BrowserWindow, app } = require('electron');
+const DiscordRPC             = require('discord-rpc');
+const { format }             = require('url');
 
-const app = new KashimaClient();
-const rpc = new KashimaRPC({
-    clientID: '519521041966563338', // Only change this when you know what a Discord snowflake is
-    enabled: true
+let mainWindow;
+
+const load = () => {
+    mainWindow = new BrowserWindow({ title: 'Kashima', width: 340, height: 380 });
+    mainWindow.setMenu(null);
+    app.setName('Kashima');
+    mainWindow.loadURL(format({
+        pathname: require('path').join(__dirname, 'static', 'index.html'),
+        slashes: true,
+        protocol: 'file:'
+    }));
+    mainWindow.on('closed', () => {
+        mainWindow = null;
+    });
+};
+
+app.on('ready', load);
+app.on('window-all-closed', () => { app.quit(); });
+app.on('activate', () => {
+    if (mainWindow === null)
+        load();
 });
 
-rpc.start();
+DiscordRPC.register('519521041966563338');
+const rpc = new DiscordRPC.Client({ transport: 'ipc' });
 
-app
-    .getApplication()
-    .on('ready', app.createBrowserWindow())
-    .on('window-all-closed', () => {
-        if (process.platform !== 'darwin') {
-            app
-                .getApplication()
-                .quit();
-        }
-
-        rpc.destroy();
-    })
-    .on('activate', () => {
-        if (app.window === null)
-            app.createBrowserWindow();
+rpc.on('ready', () => {
+    rpc.setActivity({
+        smallImageKey: 'kashimasmall',
+        smallImageText: 'https://github.com/auguwu/kashima',
+        largeImageKey: 'kashimaicon',
+        details: 'Idling'
     });
+});
+
+rpc.login({ clientId: '519521041966563338' });
