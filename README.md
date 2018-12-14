@@ -1,37 +1,7 @@
-# Kashima [![Discord](https://discordapp.com/api/guilds/382725233695522816/embed.png)](https://discord.gg/7TtMP2n) [![Travis CI](https://travis-ci.org/auguwu/kashima.svg?branch=master)](https://travis-ci.org/auguwu/kashima)
+# Kashima <img src="https://augu.me/files/ruww6r.png" align="right">
+[![Discord](https://discordapp.com/api/guilds/382725233695522816/embed.png)](https://discord.gg/7TtMP2n) [![Travis CI](https://travis-ci.org/auguwu/kashima.svg?branch=master)](https://travis-ci.org/auguwu/kashima)
+
 Kashima is an Electron player that will listen to music :musical_note: within a directory.
-
-
-## Notes
-This is my instance of kashima that I coded myself, all the songs are my personal favourite songs to listen to. If you want to change it, do the following:
-
-- 1: Install VSCode (or any editor)
-- 2: Open VSCode (or any editor)
-- 3: Clone the repository
-- 4: cd to the folder (File -> Open Folder for VSCode)
-- 5: Click on `src/static/js/renderer.js`
-- 6: On the song name function, rename the titles to the song titles
-- 7: Add the songs into the `src/static/songs` directory.
-- 8: Run the application (`npm start`)
-
-## Installation
-```sh
-# You must have the following:
-# - node.js: v8
-# - git: any
-
-# Clone the repository and go in it
-$ git clone https://github.com/auguwu/kashima.git && cd kashima
-
-# Install the dependencies
-$ npm i
-
-# Start the application
-$ npm start
-```
-
-### Installation: Starting the application
-When you start up Kashima, you might encounter into some errors. You must add a folder called `songs` and put all of your songs in that directory so Kashima can see then load them. Kashima supports 3 filetypes: `mp3`, `flac`, and `ogg`. When you added them, you may start Kashima with `npm start` in the root directory of the project and it should work fine.
 
 ## License
 > [Kashima](https://github.com/auguwu/kashima) is maintained by [auguwu](https://augu.me) and is licensed under MIT. The cover art doesn't belong to auguwu, so credit goes to them.
