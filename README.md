@@ -1,4 +1,4 @@
-# Kashima <img src="https://augu.me/files/ruww6r.png" align="right" width="250px" height="150px">
+# Kashima
 [![Discord](https://discordapp.com/api/guilds/382725233695522816/embed.png)](https://discord.gg/7TtMP2n) [![Travis CI](https://travis-ci.org/auguwu/kashima.svg?branch=master)](https://travis-ci.org/auguwu/kashima)
 
 Kashima is an Electron player that will listen to music :musical_note: within a directory.
