@@ -12,7 +12,6 @@ console.log([
     "State: Loading..."
 ].join('\n'));
 const { BrowserWindow, app } = require('electron');
-const DiscordRPC             = require('discord-rpc');
 const { format }             = require('url');
 
 let mainWindow;
@@ -37,17 +36,3 @@ app.on('activate', () => {
     if (mainWindow === null)
         load();
 });
-
-DiscordRPC.register('519521041966563338');
-const rpc = new DiscordRPC.Client({ transport: 'ipc' });
-
-rpc.on('ready', () => {
-    rpc.setActivity({
-        smallImageKey: 'kashimasmall',
-        smallImageText: 'https://github.com/auguwu/kashima',
-        largeImageKey: 'kashimaicon',
-        details: 'Idling'
-    });
-});
-
-rpc.login({ clientId: '519521041966563338' });
