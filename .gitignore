@@ -1,2 +1,4 @@
 node_modules/
-src/songs
+src/static/songs/
+dist/
+assets/

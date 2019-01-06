@@ -1,20 +1,29 @@
 {
-    "name": "@august/kashima",
+    "name": "kashima",
     "description": "A electron application to play Music within a directory.",
     "version": "0.0.1",
     "main": "src/index.js",
     "bugs": { "url": "https://github.com/auguwu/kashima/issues" },
     "dependencies": {
-        "electron": "3.0.10",
         "discord-rpc": "3.0.1",
-        "dotenv": "6.2.0",
-        "electron-builder": "20.38.3",
-        "socket.io": "2.2.0",
-        "express": "4.16.4"
+        "music-metadata": "3.4.0"
+    },
+    "devDependencies": {
+        "electron": "4.0.0",
+        "electron-builder": "20.38.4"
     },
     "scripts": {
         "start": "electron .",
-        "test": "eslint ."
+        "build": "electron-builder",
+        "pack": "electron-builder --pack"
     },
-    "author": "auguwu"
+    "author": "auguwu",
+    "build": {
+        "win": {
+            "target": "nsis"
+        },
+        "linux": {
+            "target": ["AppImage", "deb"]
+        }
+    }
 }

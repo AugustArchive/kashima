@@ -1,10 +1,19 @@
 # Kashima
-[![Discord](https://discordapp.com/api/guilds/382725233695522816/embed.png)](https://discord.gg/7TtMP2n) [![Travis CI](https://travis-ci.org/auguwu/kashima.svg?branch=master)](https://travis-ci.org/auguwu/kashima)
+[![Discord](https://discordapp.com/api/guilds/382725233695522816/embed.png)](https://discord.gg/7TtMP2n)
 
 Kashima is an Electron player that will listen to music :musical_note: within a directory.
 
+## Installation: Git
+- Git clone the repository (`git clone https://github.com/auguwu/kashima`)
+- Go to the root folder
+- Run `yarn build` or `npm run build`
+- Go to the `dist` folder and run the .exe file
+- Create a folder called songs in `src/static/songs` and add all of the `.mp3`s
+- Run the application again (or use `npm run start` / `yarn start`)
+- The song(s) should play!
+
 ## License
-> [Kashima](https://github.com/auguwu/kashima) is maintained by [auguwu](https://augu.me) and is licensed under MIT. The cover art doesn't belong to auguwu, so credit goes to them.
+> [Kashima](https://github.com/auguwu/kashima) is maintained by [auguwu](https://augu.me).
 
 ```
 Copyright (c) 2018-present auguwu
