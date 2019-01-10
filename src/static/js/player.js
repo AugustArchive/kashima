@@ -1,7 +1,7 @@
 const MusicData = require('music-metadata');
 const { ipcRenderer } = require('electron');
 const index = Math.floor(Math.random() * 14);
-const s = require(`../songs/${index}.mp3`);
+const s = `../songs/${index}.mp3`;
 const { inspect } = require('util');
 
 function setPlaying() {
