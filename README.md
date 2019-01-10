@@ -12,8 +12,11 @@ Kashima is an Electron player that will listen to music :musical_note: within a 
 - Run the application again (or use `npm run start` / `yarn start`)
 - The song(s) should play!
 
+## TODO
+- Use `@augu/urpc` for RPC
+
 ## License
-> [Kashima](https://github.com/auguwu/kashima) is maintained by [auguwu](https://augu.me).
+> [Kashima](https://github.com/auguwu/kashima) is maintained by [auguwu](https://augu.me) & released under the MIT license.
 
 ```
 Copyright (c) 2018-present auguwu
