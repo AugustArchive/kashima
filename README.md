@@ -1,14 +1,8 @@
 # Kashima
 Electron music player built with React to play songs from local files.
 
-## To Do
-- Add song searching from directories
-
-## Credits
-- [Aetheryx](https://github.com/aetheryx) **~** For basically of the .jsx files for Kashima from his old project; Lavalon.
-
 ## License
-> [Kashima](https://github.com/kashima-app/kashima) is released under the MIT license.
+> [Kashima](https://github.com/auguwu/kashima) is maintained by [auguwu](https://augu.me) & released under the MIT license.
 
 ```
 Copyright (c) 2018-present auguwu
