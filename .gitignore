@@ -2,3 +2,4 @@ node_modules/
 src/static/songs/
 dist/
 assets/
+songs/

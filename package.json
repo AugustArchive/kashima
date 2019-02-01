@@ -1,21 +1,29 @@
 {
     "name": "kashima",
-    "description": "A electron application to play Music within a directory.",
+    "description": "A electron application to play music from local files",
     "version": "0.0.1",
-    "main": "src/index.js",
-    "bugs": { "url": "https://github.com/auguwu/kashima/issues" },
+    "main": "index.js",
+    "homepage": "https://kashima.space",
+    "bugs": {
+        "url": "https://github.com/kashima-org/kashima/issues"
+    },
     "dependencies": {
-        "discord-rpc": "3.0.1",
-        "music-metadata": "3.4.0"
+        "react": "16.7.0",
+        "react-dom": "16.7.0",
+        "react-sound": "1.2.0",
+        "youtube-dl": "1.12.2"
     },
     "devDependencies": {
-        "electron": "4.0.0",
-        "electron-builder": "20.38.4"
+        "@babel/core": "7.2.2",
+        "@babel/polyfill": "7.2.5",
+        "@babel/preset-env": "7.3.1",    
+        "electron": "4.0.3",
+        "electron-builder": "20.38.5"
     },
     "scripts": {
         "start": "electron .",
-        "build": "electron-builder",
-        "pack": "electron-builder --pack"
+        "build:app:prod": "electron-builder",
+        "build:app:dev": "babel app/ -d src/"
     },
     "author": "auguwu",
     "build": {
@@ -23,7 +31,10 @@
             "target": "nsis"
         },
         "linux": {
-            "target": ["AppImage", "deb"]
+            "target": [
+                "AppImage",
+                "deb"
+            ]
         }
     }
 }

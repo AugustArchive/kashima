@@ -1,19 +1,14 @@
 # Kashima
-[![Discord](https://discordapp.com/api/guilds/382725233695522816/embed.png)](https://discord.gg/7TtMP2n)
+Electron music player built with React to play songs from local files.
 
-Kashima is an Electron player that will listen to music :musical_note: within a directory.
+## To Do
+- Add song searching from directories
 
-## Installation: Git
-- Git clone the repository (`git clone https://github.com/auguwu/kashima`)
-- Go to the root folder
-- Run `yarn build` or `npm run build`
-- Go to the `dist` folder and run the .exe file
-- Create a folder called songs in `src/static/songs` and add all of the `.mp3`s
-- Run the application again (or use `npm run start` / `yarn start`)
-- The song(s) should play!
+## Credits
+- [Aetheryx](https://github.com/aetheryx) **~** For basically of the .jsx files for Kashima from his old project; Lavalon.
 
 ## License
-> [Kashima](https://github.com/auguwu/kashima) is maintained by [auguwu](https://augu.me).
+> [Kashima](https://github.com/kashima-app/kashima) is released under the MIT license.
 
 ```
 Copyright (c) 2018-present auguwu
